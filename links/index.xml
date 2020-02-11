@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>links on The budBlog</title>
-    <link>http://example.org/links/</link>
+    <link>https://budrich.github.io/links/</link>
     <description>Recent content in links on The budBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Dec 2019 19:21:55 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/links/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://budrich.github.io/links/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

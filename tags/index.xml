@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on The budBlog</title>
-    <link>http://example.org/tags/</link>
+    <link>https://budrich.github.io/tags/</link>
     <description>Recent content in Tags on The budBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Dec 2019 19:22:19 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://budrich.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linklord</title>
-      <link>http://example.org/tags/linklord/</link>
+      <link>https://budrich.github.io/tags/linklord/</link>
       <pubDate>Fri, 13 Dec 2019 19:22:19 +0100</pubDate>
       
-      <guid>http://example.org/tags/linklord/</guid>
+      <guid>https://budrich.github.io/tags/linklord/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>http://example.org/tags/markdown/</link>
+      <link>https://budrich.github.io/tags/markdown/</link>
       <pubDate>Fri, 13 Dec 2019 19:22:19 +0100</pubDate>
       
-      <guid>http://example.org/tags/markdown/</guid>
+      <guid>https://budrich.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>testing</title>
-      <link>http://example.org/tags/testing/</link>
+      <link>https://budrich.github.io/tags/testing/</link>
       <pubDate>Fri, 13 Dec 2019 19:22:19 +0100</pubDate>
       
-      <guid>http://example.org/tags/testing/</guid>
+      <guid>https://budrich.github.io/tags/testing/</guid>
       <description></description>
     </item>
     

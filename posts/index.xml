@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on The budBlog</title>
-    <link>http://example.org/posts/</link>
+    <link>https://budrich.github.io/posts/</link>
     <description>Recent content in Posts on The budBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Apr 2018 16:09:59 +0200</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://budrich.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SimpleSyntax</title>
-      <link>http://example.org/posts/simplesyntax/</link>
+      <link>https://budrich.github.io/posts/simplesyntax/</link>
       <pubDate>Mon, 02 Apr 2018 16:09:59 +0200</pubDate>
       
-      <guid>http://example.org/posts/simplesyntax/</guid>
+      <guid>https://budrich.github.io/posts/simplesyntax/</guid>
       <description>I created this simple Sublime Text package to get a simple syntax recognition for files where the syntax isn&amp;rsquo;t obvious. By simple i mean only recognize comments. The most common use-case is dotfiles.
 I also added symbols/(sections) definitions. So by adding  &amp;gt;&amp;gt; SECTION NAME after a comment declaration you can easily go to different sections in the file.
 The package currently contains four syntaxes:
@@ -25,99 +25,99 @@ The package currently contains four syntaxes:
     
     <item>
       <title>new_ass_features</title>
-      <link>http://example.org/posts/new_ass_features/</link>
+      <link>https://budrich.github.io/posts/new_ass_features/</link>
       <pubDate>Wed, 03 Jan 2018 13:37:07 +0100</pubDate>
       
-      <guid>http://example.org/posts/new_ass_features/</guid>
+      <guid>https://budrich.github.io/posts/new_ass_features/</guid>
       <description>I have made lots of small updates and additions to i3ass the last couple of weeks. The changes might seem small and subtle, but they have improved the experience a lot.
 I can now hide an active a container by running i3run on the active window, this is a much better way then using the move commands all the time. And floating windows now appear centered to the mouse position, but adjusted to the screenedges.</description>
     </item>
     
     <item>
       <title>i3_flipping_tabs</title>
-      <link>http://example.org/posts/i3_flipping_tabs/</link>
+      <link>https://budrich.github.io/posts/i3_flipping_tabs/</link>
       <pubDate>Wed, 03 Jan 2018 10:22:44 +0100</pubDate>
       
-      <guid>http://example.org/posts/i3_flipping_tabs/</guid>
+      <guid>https://budrich.github.io/posts/i3_flipping_tabs/</guid>
       <description>I have gotten some requests on an isolated version of i3fyra&amp;rsquo;s tabswitching function. And this morning I sat down to try a new way to do it, and it worked .. pretty, pretty, pretty good :)
 Vanilla i3 doesn&amp;rsquo;t have a separate function for switching tabs, instead we use the normal focus [left|right]. This is not so well suited for tabs since if one focus right when the last tab is active, the focus will pop out to the container to the right if there is one.</description>
     </item>
     
     <item>
       <title>ass_divided</title>
-      <link>http://example.org/posts/ass_divided/</link>
+      <link>https://budrich.github.io/posts/ass_divided/</link>
       <pubDate>Sat, 23 Dec 2017 12:51:15 +0100</pubDate>
       
-      <guid>http://example.org/posts/ass_divided/</guid>
+      <guid>https://budrich.github.io/posts/ass_divided/</guid>
       <description>I have divided i3ass in two repositories, i3ass and i3add (i3 additions). My thought is that i3ass will be a more serious set of tools. While i3add will be more experimental and can be seen as a showcase of uses for i3ass. I do use all i3add scripts in my personal, daily workflow.
    i3ass function     i3var Set or get a i3 variable   i3fyra An advanced simple gridbased tiling layout   i3run Run, Raise or hide windows   i3list List attributes of i3wm   i3get Return information about i3wm   i3flip Tabswitching done right   i3add function   i3cast Create and upload screen recordings   i3Kornhe Resize windows by moving the corners   i3minimize Minimize active window   i3monocle Maximize active window   i3zen Send windows to the zenter   i3term Launch a command in a new urxvt window   i3wswp Switch workspace and wallpaper    Installation i3add will have a installation script similar to the old install.</description>
     </item>
     
     <item>
       <title>i3_size_matters</title>
-      <link>http://example.org/posts/i3_size_matters/</link>
+      <link>https://budrich.github.io/posts/i3_size_matters/</link>
       <pubDate>Fri, 15 Dec 2017 22:51:49 +0100</pubDate>
       
-      <guid>http://example.org/posts/i3_size_matters/</guid>
+      <guid>https://budrich.github.io/posts/i3_size_matters/</guid>
       <description>I just recorded and uploaded a video to youtube, where i show a technique to resize floating window by moving the corners and still being able to resize tiling windows with the same keybindings.
 The config file and script shown in the video can be found on GitHub.</description>
     </item>
     
     <item>
       <title>fixed_fixedsys</title>
-      <link>http://example.org/posts/fixed_fixedsys/</link>
+      <link>https://budrich.github.io/posts/fixed_fixedsys/</link>
       <pubDate>Thu, 23 Nov 2017 22:35:11 +0100</pubDate>
       
-      <guid>http://example.org/posts/fixed_fixedsys/</guid>
+      <guid>https://budrich.github.io/posts/fixed_fixedsys/</guid>
       <description>I&amp;rsquo;m not sure why, but Fixedsys is one of my all time favorite fonts. I particularly like it as a monospaced terminal and programming font (Fixedsys is the font used on this site to display code and ASCII art). But it hasn&amp;rsquo;t been painless to get the terminal to accept Fixedsys.
 The problem from the start is that the available version of Fixedsys is a .ttf font. After some digging around the Internet, I found this article on askubuntu.</description>
     </item>
     
     <item>
       <title>fresh_start</title>
-      <link>http://example.org/posts/fresh_start/</link>
+      <link>https://budrich.github.io/posts/fresh_start/</link>
       <pubDate>Sun, 01 Oct 2017 19:13:40 +0200</pubDate>
       
-      <guid>http://example.org/posts/fresh_start/</guid>
+      <guid>https://budrich.github.io/posts/fresh_start/</guid>
       <description>These are the steps I take to setup my work environment on a fresh install of Peppermint OS 8. Most of the steps are valid on other GNU/Linux distributions, but I don&amp;rsquo;t recommend anyone to blindly follow and install everything.
  Before doing anything else i start syncing Dropbox. I start with this step because it can take up to 45 minutes, so while Dropbox is syncing there is time to install and setup other programs.</description>
     </item>
     
     <item>
       <title>mouseback</title>
-      <link>http://example.org/posts/mouseback/</link>
+      <link>https://budrich.github.io/posts/mouseback/</link>
       <pubDate>Mon, 25 Sep 2017 17:20:01 +0200</pubDate>
       
-      <guid>http://example.org/posts/mouseback/</guid>
+      <guid>https://budrich.github.io/posts/mouseback/</guid>
       <description>A while ago I got irritated how messy my i3 config file looked, and I researched alternative hotkey managers. I tried sxhkd and it is a fine piece of code. I got a much cleaner setup of the hotkeys and I could do stuff that i wasn&amp;rsquo;t able to do with i3.
 But a couple of days ago, i realized that my i3 config could be just as clean as sxhkd by using variables.</description>
     </item>
     
     <item>
       <title>swedish_keyboards</title>
-      <link>http://example.org/posts/swedish_keyboards/</link>
+      <link>https://budrich.github.io/posts/swedish_keyboards/</link>
       <pubDate>Mon, 25 Sep 2017 17:19:12 +0200</pubDate>
       
-      <guid>http://example.org/posts/swedish_keyboards/</guid>
+      <guid>https://budrich.github.io/posts/swedish_keyboards/</guid>
       <description>when I was working as a technical support agent I received several calls from angry men who couldn&amp;rsquo;t find the @ symbol on the keyboard. When I explained that they had to hold Alt-Gr and pressing 2 at the same time, they exploded with anger and told me to tell the technicians to make a new keyboard layout! I explained it&amp;rsquo;s an old standard and agreed it was stupid, but that it would probably never change.</description>
     </item>
     
     <item>
       <title>me_myself_and_i3</title>
-      <link>http://example.org/posts/me_myself_and_i3/</link>
+      <link>https://budrich.github.io/posts/me_myself_and_i3/</link>
       <pubDate>Mon, 25 Sep 2017 17:18:30 +0200</pubDate>
       
-      <guid>http://example.org/posts/me_myself_and_i3/</guid>
+      <guid>https://budrich.github.io/posts/me_myself_and_i3/</guid>
       <description>Or, how I became a tiler i3 is a dynamic window manager for X. I use i3, and I really like it. There are many similar window managers and I haven&amp;rsquo;t tried many of them. I have run and tinkered with bug.n on windows and tested awesome and dwm on GNU/Linux.
 Maybe I was unlucky and had bad timing with awesome, I was very fresh on GNU/Linux and I think the awesome project was in a transition phase, but I had a hard time grasping all of it.</description>
     </item>
     
     <item>
       <title>i3_setup</title>
-      <link>http://example.org/posts/i3_setup/</link>
+      <link>https://budrich.github.io/posts/i3_setup/</link>
       <pubDate>Mon, 25 Sep 2017 17:17:10 +0200</pubDate>
       
-      <guid>http://example.org/posts/i3_setup/</guid>
+      <guid>https://budrich.github.io/posts/i3_setup/</guid>
       <description>These are some of my personal preferences and thoughts on how to configure i3. Read the official userguide often to see what options you got. I have left out a lot of functionality in my config that i don&amp;rsquo;t use.
 Your config file can be located at different places depending on how you installed i3.
 variables the first line of the default config file looks like this:
@@ -126,10 +126,10 @@ set $mod Mod4</description>
     
     <item>
       <title>font_rendering</title>
-      <link>http://example.org/posts/font_rendering/</link>
+      <link>https://budrich.github.io/posts/font_rendering/</link>
       <pubDate>Mon, 25 Sep 2017 17:15:34 +0200</pubDate>
       
-      <guid>http://example.org/posts/font_rendering/</guid>
+      <guid>https://budrich.github.io/posts/font_rendering/</guid>
       <description>It is easy to get used to bad font rendering. But there are some simple steps one can take to get great looking fonts on GNU/Linux.
 Below is a summary of an article on binarytides, with some spice.
 download the following fonts from
