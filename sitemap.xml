@@ -3,32 +3,172 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://budrich.github.io/about/</loc>
-    <lastmod>2019-12-13T19:22:19+01:00</lastmod>
+    <loc>https://budrich.github.io/tags/bash/</loc>
+    <lastmod>2020-03-07T14:34:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/tags/linklord/</loc>
-    <lastmod>2019-12-13T19:22:19+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/tags/markdown/</loc>
-    <lastmod>2019-12-13T19:22:19+01:00</lastmod>
+    <loc>https://budrich.github.io/blog/2003/make-slides/</loc>
+    <lastmod>2020-03-07T14:34:25+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://budrich.github.io/tags/</loc>
-    <lastmod>2019-12-13T19:22:19+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/tags/testing/</loc>
-    <lastmod>2019-12-13T19:22:19+01:00</lastmod>
+    <lastmod>2020-03-07T14:34:25+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://budrich.github.io/</loc>
+    <lastmod>2020-03-07T14:34:25+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/blog/2003/centered-terminal/</loc>
+    <lastmod>2020-03-04T21:26:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/bash/</loc>
+    <lastmod>2020-03-03T21:46:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/</loc>
+    <lastmod>2020-03-03T21:46:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/pdf/</loc>
+    <lastmod>2020-03-03T21:46:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-03-03T21:46:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/tool/</loc>
+    <lastmod>2020-03-03T21:46:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/arch/</loc>
+    <lastmod>2020-03-03T17:11:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-03-03T17:11:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/lunduke/</loc>
+    <lastmod>2020-03-03T17:11:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/podcast/</loc>
+    <lastmod>2020-03-03T17:11:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/unity/</loc>
+    <lastmod>2020-03-03T17:11:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/video/</loc>
+    <lastmod>2020-03-03T17:11:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/interview/</loc>
+    <lastmod>2020-02-22T19:04:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-02-22T19:04:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-02-15T22:26:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/tetris/</loc>
+    <lastmod>2020-02-15T22:26:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/youtube/</loc>
+    <lastmod>2020-02-15T22:26:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/amiga/</loc>
+    <lastmod>2020-02-15T19:50:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/gamedev/</loc>
+    <lastmod>2020-02-15T19:50:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/pixelart/</loc>
+    <lastmod>2020-02-15T19:50:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-02-15T19:50:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/books/</loc>
+    <lastmod>2020-02-15T19:40:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/code/</loc>
+    <lastmod>2020-02-15T19:40:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-02-15T19:40:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/python/</loc>
+    <lastmod>2020-02-15T19:40:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/feed/</loc>
+    <lastmod>2020-02-13T10:33:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/hackernews/</loc>
+    <lastmod>2020-02-13T10:33:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc></loc>
+    <lastmod>2020-02-13T10:33:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/linktags/webshit/</loc>
+    <lastmod>2020-02-13T10:33:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/about/</loc>
     <lastmod>2019-12-13T19:22:19+01:00</lastmod>
   </url>
   
@@ -43,83 +183,78 @@
   </url>
   
   <url>
+    <loc>https://budrich.github.io/posts/</loc>
+    <lastmod>2019-12-13T19:21:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/drafts/</loc>
+    <lastmod>2019-12-13T19:21:55+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://budrich.github.io/links/</loc>
     <lastmod>2019-12-13T19:21:55+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/test/first/</loc>
-    <lastmod>2019-09-06T15:00:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/test/</loc>
-    <lastmod>2019-09-06T15:00:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/posts/</loc>
+    <loc>https://budrich.github.io/tags/highlighting/</loc>
     <lastmod>2018-04-02T16:09:59+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/posts/simplesyntax/</loc>
+    <loc>https://budrich.github.io/tags/oc/</loc>
     <lastmod>2018-04-02T16:09:59+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/posts/new_ass_features/</loc>
-    <lastmod>2018-01-03T13:37:07+01:00</lastmod>
+    <loc>https://budrich.github.io/tags/plugin/</loc>
+    <lastmod>2018-04-02T16:09:59+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/posts/i3_flipping_tabs/</loc>
-    <lastmod>2018-01-03T10:22:44+01:00</lastmod>
+    <loc>https://budrich.github.io/blog/1804/simplesyntax/</loc>
+    <lastmod>2018-04-02T16:09:59+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/posts/ass_divided/</loc>
+    <loc>https://budrich.github.io/tags/sublime/</loc>
+    <lastmod>2018-04-02T16:09:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/blog/1712/ass-divided/</loc>
     <lastmod>2017-12-23T12:51:15+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/posts/i3_size_matters/</loc>
-    <lastmod>2017-12-15T22:51:49+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/posts/fixed_fixedsys/</loc>
-    <lastmod>2017-11-23T22:35:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/posts/fresh_start/</loc>
-    <lastmod>2017-10-01T19:13:40+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/posts/mouseback/</loc>
+    <loc>https://budrich.github.io/tags/dirthack/</loc>
     <lastmod>2017-09-25T17:20:01+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://budrich.github.io/posts/swedish_keyboards/</loc>
+    <loc>https://budrich.github.io/tags/keyboard/</loc>
+    <lastmod>2017-09-25T17:20:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/tags/mouse/</loc>
+    <lastmod>2017-09-25T17:20:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/blog/1709/mouseback/</loc>
+    <lastmod>2017-09-25T17:20:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/tags/sxhkd/</loc>
+    <lastmod>2017-09-25T17:20:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://budrich.github.io/blog/1709/swedish-keyboards/</loc>
     <lastmod>2017-09-25T17:19:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/posts/me_myself_and_i3/</loc>
-    <lastmod>2017-09-25T17:18:30+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/posts/i3_setup/</loc>
-    <lastmod>2017-09-25T17:17:10+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://budrich.github.io/posts/font_rendering/</loc>
-    <lastmod>2017-09-25T17:15:34+02:00</lastmod>
   </url>
   
   <url>

@@ -8,8 +8,85 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Dec 2019 19:21:55 +0100</lastBuildDate>
     
-	<atom:link href="https://budrich.github.io/links/index.xml" rel="self" type="application/rss+xml" />
+  <atom:link href="https://budrich.github.io/links/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>shrinkpdf</title>
+      <link>http://www.alfredklomp.com/programming/shrinkpdf/</link>
+      <pubDate>Tue, 03 Mar 2020 21:46:18 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;I was looking for a tool to shrink large pdf files that consisted solely of high quality scans and found this bash script wrapper around the 
+&lt;a href=&#34;http://www.ghostscript.com/&#34; target=&#34;_blank&#34;&gt;Ghoustscript&lt;/a&gt;
+ program, That will change the DPI of the files to 72, which reduced the filesize with ~90% (230mb -&amp;gt; 20mb).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Action Show s14e03 (2010)</title>
+      <link>https://archive.org/details/ArchLinuxReviewLinuxActionShowS14e03</link>
+      <pubDate>Tue, 03 Mar 2020 17:11:48 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Video where Chris and Bryan have an Arch Linux special. They also discuss the big news of the week, next Ubuntu will ship with Unity as the default DE. Lunduke promotes his BBS that he hosts on DOS box on his Linux machine :D. Lundukes also mentions that the newly released python 3, that only exist on arch is not backwards compatible and no one will use it for at least 10 years. They also show the arch installer from back then and it is ncurses menu based, that is probably the only thing that really has changed since then.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Richard Hipp on the changelog</title>
+      <link>https://changelog.com/podcast/201</link>
+      <pubDate>Sat, 22 Feb 2020 19:04:00 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Interview on the podcast, &amp;ldquo;the changelog&amp;rdquo;. Lots of interesting and unique things about SQLite (and i guess Richard). One thing is that it doesn&amp;rsquo;t have a license, it is published directly to the public domain. But some companies pay for a license anyways. &amp;ldquo;It is cheaper for them, then convincing their lawyers that they don&amp;rsquo;t need one&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PAL Tetris Maxout</title>
+      <link>https://youtube.com/watch?v=_C8uFs1uKwQ</link>
+      <pubDate>Sat, 15 Feb 2020 22:26:32 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Jakegames, 15 years old. Done the impossible. Maxing out the PAL version of NES Tetris. But it&amp;rsquo;s done on an emulator with keyboard, so it doesn&amp;rsquo;t count as WR. But no one has ever been even close to this level, with or without emulator. The PAL version of tetris was considered impossible to max out due to it&amp;rsquo;s much higher speed difference after level 18 (PAL 19 is as fast as NTSC 29). PAL version do however have more generous DAS (delayed auto shift), making PAL 19 more playable then NTSC 29. But still maxing out demands inhuman concentration just to endure to a max out (the drop rate is about 1 level/frame, and the field is 20 levels high. and the frame rate is 60fps, so yeah, extremely fast). Impressive. Also Jakes aggressive and inventive playing style makes his games the most entertaining to watch, be it a world record or not.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spelskaparna ep 91 Dan Malone and Mattias Kylen</title>
+      <link>https://spelskaparna.libsyn.com/91-dan-malone-and-mattias-kylen-artist-the-bitmap-brothers</link>
+      <pubDate>Sat, 15 Feb 2020 19:50:00 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Great interview with &lt;strong&gt;Dan Malone&lt;/strong&gt;
+who did the graphics on the classic &lt;strong&gt;speedball&lt;/strong&gt; games
+for the &lt;strong&gt;Amiga&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Code the classics</title>
+      <link>https://wireframe.raspberrypi.org/books/code-the-classics1</link>
+      <pubDate>Sat, 15 Feb 2020 19:40:29 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Book describing how to make classic games in Python and Pygame Zero.
+Graphical assets by &lt;strong&gt;Dan Malone&lt;/strong&gt; (pixel art master known for &lt;strong&gt;speedball 2&lt;/strong&gt;). Available both as free pdf or hardcover, source code for the games on 
+&lt;a href=&#34;https://github.com/Wireframe-Magazine/Code-the-Classics&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;
+.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Web shit weekly</title>
+      <link>https://n-gate.com/</link>
+      <pubDate>Thu, 13 Feb 2020 10:33:05 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;An annotated digest of the top &amp;ldquo;Hacker&amp;rdquo; &amp;ldquo;News&amp;rdquo; .&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

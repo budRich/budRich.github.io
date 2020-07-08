@@ -1,90 +1,47 @@
 <html>
   <head>
-  <link rel="stylesheet" href="https://budrich.github.io/css/fullstyle.min.672f788a44ca012dfce437dc04d20351888bfdebbbbae84e8f09f19b63ab412f.css" integrity="sha256-Zy94ikTKAS385DfcBNIDUYiL/eu7uuhOjwnxm2OrQS8="> 
+  <link rel="stylesheet" href="../../css/fullstyle.036c064707bd86f2e1f7e49cbbaedb6375b83a5e4fb932f3f4862a47d766d764.css" integrity="sha256-A2wGRwe9hvLh9&#43;Scu67bY3W4Ol5PuTLz9IYqR9dm12Q="> 
 
-  <script>
-  
-
-
-  
-  if ( top !== self ) {
-      
-      self.location = 'about:blank'; 
-  }
-
-
-  
-  
-  var DYN_WEB = DYN_WEB || {};
-
-  
-
-  
-  DYN_WEB.Event=(function(Ev){Ev.add=document.addEventListener?function(obj,etype,fp,cap){cap=cap||false;obj.addEventListener(etype,fp,cap);}:function(obj,etype,fp){obj.attachEvent('on'+etype,fp);};Ev.remove=document.removeEventListener?function(obj,etype,fp,cap){cap=cap||false;obj.removeEventListener(etype,fp,cap);}:function(obj,etype,fp){obj.detachEvent('on'+etype,fp);};Ev.DOMit=function(e){e=e?e:window.event;if(!e.target){e.target=e.srcElement;}if(!e.preventDefault){e.preventDefault=function(){e.returnValue=false;return false;};}if(!e.stopPropagation){e.stopPropagation=function(){e.cancelBubble=true;};}return e;};Ev.getTarget=function(e){e=Ev.DOMit(e);var tgt=e.target;if(tgt.nodeType!==1){tgt=tgt.parentNode;}return tgt;};Ev.domReady=(function(){var funcs=[];var ready=false;function handler(e){if(ready){return;}if(e.type==="readystatechange"&&document.readyState!=="complete"){return;}for(var i=0,len=funcs.length;i<len;i++){funcs[i].call(document);}ready=true;funcs=[];}if(document.addEventListener){document.addEventListener("DOMContentLoaded",handler,false);document.addEventListener("readystatechange",handler,false);window.addEventListener("load",handler,false);}else if(document.attachEvent){document.attachEvent("onreadystatechange",handler);window.attachEvent("onload",handler);}return function whenReady(f){if(ready){f.call(document);}else{funcs.push(f);}};})();return Ev;}(DYN_WEB.Event||{}));
-
-  function dw_getWindowDims() {
-      var doc = document, w = window;
-      var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')? doc.documentElement: doc.body;
-      
-      var width = docEl.clientWidth;
-      var height = docEl.clientHeight;
-      
-      
-      if ( w.innerWidth && width > w.innerWidth ) {
-          width = w.innerWidth;
-          height = w.innerHeight;
-      }
-      
-      return {width: width, height: height};
-  }
-
-  
-  function doDemoDisplay() {
-      var dims = dw_getWindowDims();
-      var el = document.getElementById('viewportinfo');
-
-      
-      
-      
-      
-      var prefix = (
-                    dims.width > 1280 ? 'xl' : 
-                    dims.width > 1200 ? 'lg2' : 
-                    dims.width > 1024 ? 'lg' : 
-                    dims.width > 768  ? 'md' : 'sm'
-                   );
-      el.innerHTML = prefix + ': ' + dims.width + '<br>height: ' + dims.height;
-      
-  }
-
-  DYN_WEB.Event.domReady( doDemoDisplay );
-
-  DYN_WEB.Event.add( window, 'resize', doDemoDisplay );
-</script>
-
-  <script src="/jslibs/turbolinks/turbolinks.min.658b7513da48ca977d1fe342a7739be7b3fa514f5ad8bee4a882c91443e80d69.js" integrity="sha256-ZYt1E9pIypd9H&#43;NCp3Ob57P6UU9a2L7kqILJFEPoDWk=" crossorigin="anonymous"></script>
-<script src="/jslibs/scrollfix.js" integrity="" crossorigin="anonymous"></script>
-<script src="/jslibs/savesidebarscroll.js" integrity="" crossorigin="anonymous"></script>
-
+  <script src="../../js/budlib.min.c870ab78dedbe80953b9402540733ec6dca76843e3a15de234cfaeeeb7400c5d.js" 
+              integrity="sha256-yHCreN7b6AlTuUAlQHM&#43;xtynaEPjoV3iNM&#43;u7rdADF0=" 
+              crossorigin="anonymous"
+      ></script>
+    <script src="../../js/sidebarstate.min.b7b2d23a8bb05e03fa842b821fb2a73f57006bace2cee6c0a274919d55b4eae0.js" 
+              integrity="sha256-t7LSOouwXgP6hCuCH7KnP1cAa6zizubAonSRnVW06uA=" 
+              crossorigin="anonymous"
+      ></script>
+    <script src="../../jslibs/turbolinks/turbolinks.min.658b7513da48ca977d1fe342a7739be7b3fa514f5ad8bee4a882c91443e80d69.js" 
+              integrity="sha256-ZYt1E9pIypd9H&#43;NCp3Ob57P6UU9a2L7kqILJFEPoDWk=" 
+              crossorigin="anonymous"
+      ></script>
+    <script src="../../js/scrollfix.min.2bdd69bee4bc8009c4cfefece67556defa246a683fd875135634a9be5ba9b03a.js" 
+              integrity="sha256-K91pvuS8gAnEz&#43;/s5nVW3vokamg/2HUTVjSpvlupsDo=" 
+              crossorigin="anonymous"
+      ></script>
+    <script src="../../js/sidebarexpand.min.0f53acc65ab3f2c4ea97b1cbff88ee0620081c3cdaa0ce3cb62a4c5b152c555d.js" 
+              integrity="sha256-D1Osxlqz8sTql7HL/4juBiAIHDzaoM48tipMWxUsVV0=" 
+              crossorigin="anonymous"
+      ></script>
+    
   </head>
   <body>
     <main id=Main>
       
       <div class="sidebar__placeholder">
 </div>
-<input class="burger__checkbox" id="cb__sidebar-toggle" type="checkbox">
+<input data-turbolinks-permanent class="burger__checkbox" id="cb__sidebar-toggle" type="checkbox">
 <label class="burger__label" for="cb__sidebar-toggle">
 <div class="burger__container">
   <div class="burger__button"></div>
 </div>
 </label>
 
-<aside data-turbolinks-permanent id="sidebar" class="sidebar__container">
+<aside id="sidebar" class="sidebar__container">
     <div class="sidebar__header">
       <pre class="ascii"><pre>
     </div>
-    <div class="sidebar__main">
-      <div id=urban  class="budnav__container">
+    <div data-turbolinks-permanent id="mainsidebar" class="sidebar__main">
+      <div id=budnav-container  class="budnav__container">
         
 
 
@@ -135,10 +92,7 @@
           
         </symbol>
 
-        <symbol id="folder" viewBox="0 0 24 24">
-          <use class="budnav__svg--closed" xlink:href="#folder-closed" x="0"  y="0" />
-          <use class="budnav__svg--open"   xlink:href="#folder-open"   x="0"  y="0" />
-        </symbol>
+
 
       
       
@@ -155,21 +109,6 @@
 
       <symbol id="file" viewBox="0 0 24 24">
         <path d="M22 6h-6V0l6 6zm-8 2V0H2v24h20V8h-8z"/>
-      </symbol>
-
-    
-
-  
-    
-    
-    
-    
-
-    
-      
-
-      <symbol id="info-7" viewBox="0 0 24 24">
-        <path d="M12 0C5.373.0.0 5.373.0 12s5.373 12 12 12 12-5.373 12-12S18.627.0 12 0zM9.967 16.01c.564-1.789 1.632-3.932 1.821-4.474.273-.787-.211-1.136-1.74.209l-.34-.64c1.744-1.897 5.335-2.326 4.113.613-.763 1.835-1.309 3.074-1.621 4.03-.455 1.393.694.828 1.819-.211.153.25.203.331.356.619-2.498 2.378-5.271 2.588-4.408-.146zm4.742-8.169c-.532.453-1.32.443-1.761-.022-.441-.465-.367-1.208.164-1.661.532-.453 1.32-.442 1.761.022.439.466.367 1.209-.164 1.661z"/>
       </symbol>
 
     
@@ -229,7 +168,7 @@
       
 
       <symbol id="gitternew" viewBox="0 0 24 24">
-        <path d="m3.839999.0h1.92v14.4h-1.92zm4.799999 4.8h1.92V24h-1.92zm4.8.0h1.92V24h-1.92zm4.800003.0h1.92v9.6h-1.92z" style="stroke-width:.95999998" id="rect8" />
+        <path d="m3.839999.0h1.92v14.4h-1.92zm4.799999 4.8h1.92V24h-1.92zm4.8.0h1.92V24h-1.92zm4.800003.0h1.92v9.6h-1.92z" style="stroke-width:.95999998" id="rect8"/>
       </symbol>
 
     
@@ -244,7 +183,7 @@
       
 
       <symbol id="bcnew" viewBox="0 0 24 24">
-        <path style="stroke-width:.03666649" d="M22.778338 9.2819428C22.075142 5.4014874 18.780491 2.289698 14.98501 1.4318566 9.8868958-.0986198 3.7465592 2.5080643 1.6595376 7.4850317.27846915 10.957346 1.0785876 15.299351 3.8935603 17.833265c.6713079 1.29338-.60018 2.447182-1.4225828 3.290191-.7419059.28823-1.86164475 1.554925-.4438474 1.780141 1.7162744.228482 3.4361427-.335268 5.0198163-.953276 1.3480765-.583281 2.7841206-1.040423 4.2716576-.938431 2.120519.0052 4.331713-.16043 6.193079-1.281004 3.633204-1.959174 6.295666-6.260819 5.266655-10.4489432zM6.9374898 12.250366C6.790444 13.567073 4.8067492 13.599222 4.372281 12.442197 4.099567 11.30488 4.7206604 9.930424 5.5720643 9.1980762 6.5153056 8.5481294 6.9527852 9.8634633 6.119534 10.313065c-.2317875.857434 1.1406746 1.053886.8179558 1.937301zm3.0061493-.03811C9.8209684 13.619501 7.7271914 13.553153 7.368933 12.310633 7.0270623 11.0753 7.8777777 9.503551 8.9788879 8.954655c1.0527711.1523393.4085928 1.331483.1489378 1.80939.1773013.572813 1.1272453.703018.8158134 1.448209zm5.4647729.95032c-1.357693.182074-.63796-1.407066-.313242-2.01275-1.332025-.225278-.874681-2.2166031.257133-2.4054863 1.406532-.2255147 1.873945 1.5869333 1.26902 2.5909703-.282523.680667-.740873 1.268747-1.212911 1.827264zm4.440063-2.942494c-.138383 1.092433-.585623 2.579824-1.755791 2.892231-.99161-.23751-.289199-1.230134-.08026-1.693471-.641529-.809504-1.351114-2.2240202.175527-2.573546.915394-.247372 1.798885.4035673 1.660522 1.374786z" id="path11" />
+        <path style="stroke-width:.03666649" d="M22.778338 9.2819428C22.075142 5.4014874 18.780491 2.289698 14.98501 1.4318566 9.8868958-.0986198 3.7465592 2.5080643 1.6595376 7.4850317.27846915 10.957346 1.0785876 15.299351 3.8935603 17.833265c.6713079 1.29338-.60018 2.447182-1.4225828 3.290191-.7419059.28823-1.86164475 1.554925-.4438474 1.780141 1.7162744.228482 3.4361427-.335268 5.0198163-.953276 1.3480765-.583281 2.7841206-1.040423 4.2716576-.938431 2.120519.0052 4.331713-.16043 6.193079-1.281004 3.633204-1.959174 6.295666-6.260819 5.266655-10.4489432zM6.9374898 12.250366C6.790444 13.567073 4.8067492 13.599222 4.372281 12.442197 4.099567 11.30488 4.7206604 9.930424 5.5720643 9.1980762 6.5153056 8.5481294 6.9527852 9.8634633 6.119534 10.313065c-.2317875.857434 1.1406746 1.053886.8179558 1.937301zm3.0061493-.03811C9.8209684 13.619501 7.7271914 13.553153 7.368933 12.310633 7.0270623 11.0753 7.8777777 9.503551 8.9788879 8.954655c1.0527711.1523393.4085928 1.331483.1489378 1.80939.1773013.572813 1.1272453.703018.8158134 1.448209zm5.4647729.95032c-1.357693.182074-.63796-1.407066-.313242-2.01275-1.332025-.225278-.874681-2.2166031.257133-2.4054863 1.406532-.2255147 1.873945 1.5869333 1.26902 2.5909703-.282523.680667-.740873 1.268747-1.212911 1.827264zm4.440063-2.942494c-.138383 1.092433-.585623 2.579824-1.755791 2.892231-.99161-.23751-.289199-1.230134-.08026-1.693471-.641529-.809504-1.351114-2.2240202.175527-2.573546.915394-.247372 1.798885.4035673 1.660522 1.374786z" id="path11"/>
       </symbol>
 
     
@@ -259,7 +198,22 @@
       
 
       <symbol id="lbrynew" viewBox="0 0 24 24">
-        <path d="m23.349059 14.189504.169073-1.065168-1.031348-.177532.06764-.41423L24 12.777732 23.763297 14.257134zm.143714-5.4948967v1.1919702L11.759071 17.097563l-8.8425431-4.336739.0169-.667842 8.7918141 4.328291 11.175763-6.8643866V9.0665775L12.350821 3.9774609.58329967 11.256075v3.254666L11.725241 20.022538 23.357502 12.887632 23.687196 13.394854 11.759061 20.698828.0 14.882701V10.926373L12.325461 3.3011716l11.167292 5.3934357z" style="stroke-width:.08453672" id="path4" />
+        <path d="m23.349059 14.189504.169073-1.065168-1.031348-.177532.06764-.41423L24 12.777732 23.763297 14.257134zm.143714-5.4948967v1.1919702L11.759071 17.097563l-8.8425431-4.336739.0169-.667842 8.7918141 4.328291 11.175763-6.8643866V9.0665775L12.350821 3.9774609.58329967 11.256075v3.254666L11.725241 20.022538 23.357502 12.887632 23.687196 13.394854 11.759061 20.698828.0 14.882701V10.926373L12.325461 3.3011716l11.167292 5.3934357z" style="stroke-width:.08453672" id="path4"/>
+      </symbol>
+
+    
+
+  
+    
+    
+    
+    
+
+    
+      
+
+      <symbol id="link-3" viewBox="0 0 24 24">
+        <path d="M17.033 6.966c.584.583.584 1.529.0 2.112l-7.955 7.956c-.583.583-1.529.583-2.112.0s-.583-1.529.0-2.112l7.956-7.956c.582-.583 1.528-.583 2.111.0zm-9.138 13.386c-1.171 1.171-3.076 1.171-4.248.0-1.171-1.171-1.171-3.077.0-4.248l5.639-5.632c-1.892-.459-3.971.05-5.449 1.528l-2.147 2.147c-2.254 2.254-2.254 5.909.0 8.163s5.909 2.254 8.163.0l2.147-2.148c1.477-1.477 1.986-3.556 1.527-5.448l-5.632 5.638zm6.251-18.662-2.146 2.148c-1.478 1.478-1.99 3.553-1.53 5.445l5.634-5.635c1.172-1.171 3.077-1.171 4.248.0 1.172 1.171 1.172 3.077.0 4.248l-5.635 5.635c1.893.459 3.968-.053 5.445-1.53l2.146-2.147c2.254-2.254 2.254-5.908.0-8.163-2.253-2.254-5.908-2.254-8.162-.001z"/>
       </symbol>
 
     
@@ -288,8 +242,8 @@
     
       
 
-      <symbol id="flask-7" viewBox="0 0 24 24">
-        <path d="M20.759 20.498c-2.342-3.663-5.575-6.958-5.743-11.498H13c.173 5.212 3.512 8.539 5.953 12.356.143.302-.068.644-.377.644h-1.264l-4.734-7h-3.52c.873-1.665 1.85-3.414 1.936-6h-2.01c-.169 4.543-3.421 7.864-5.743 11.498-.165.347-.241.707-.241 1.057.0 1.283 1.023 2.445 2.423 2.445h13.153c1.4.0 2.424-1.162 2.424-2.446.0-.35-.076-.709-.241-1.056zm-4.759-15.498c0 1.105-.896 2-2 2s-2-.895-2-2 .896-2 2-2 2 .895 2 2zm-5-1.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5.672-1.5 1.5-1.5 1.5.671 1.5 1.5zm0 3.5c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm3-6c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1z"/>
+      <symbol id="info-7" viewBox="0 0 24 24">
+        <path d="M12 0C5.373.0.0 5.373.0 12s5.373 12 12 12 12-5.373 12-12S18.627.0 12 0zM9.967 16.01c.564-1.789 1.632-3.932 1.821-4.474.273-.787-.211-1.136-1.74.209l-.34-.64c1.744-1.897 5.335-2.326 4.113.613-.763 1.835-1.309 3.074-1.621 4.03-.455 1.393.694.828 1.819-.211.153.25.203.331.356.619-2.498 2.378-5.271 2.588-4.408-.146zm4.742-8.169c-.532.453-1.32.443-1.761-.022-.441-.465-.367-1.208.164-1.661.532-.453 1.32-.442 1.761.022.439.466.367 1.209-.164 1.661z"/>
       </symbol>
 
     
@@ -303,8 +257,8 @@
     
       
 
-      <symbol id="link-3" viewBox="0 0 24 24">
-        <path d="M17.033 6.966c.584.583.584 1.529.0 2.112l-7.955 7.956c-.583.583-1.529.583-2.112.0s-.583-1.529.0-2.112l7.956-7.956c.582-.583 1.528-.583 2.111.0zm-9.138 13.386c-1.171 1.171-3.076 1.171-4.248.0-1.171-1.171-1.171-3.077.0-4.248l5.639-5.632c-1.892-.459-3.971.05-5.449 1.528l-2.147 2.147c-2.254 2.254-2.254 5.909.0 8.163s5.909 2.254 8.163.0l2.147-2.148c1.477-1.477 1.986-3.556 1.527-5.448l-5.632 5.638zm6.251-18.662-2.146 2.148c-1.478 1.478-1.99 3.553-1.53 5.445l5.634-5.635c1.172-1.171 3.077-1.171 4.248.0 1.172 1.171 1.172 3.077.0 4.248l-5.635 5.635c1.893.459 3.968-.053 5.445-1.53l2.146-2.147c2.254-2.254 2.254-5.908.0-8.163-2.253-2.254-5.908-2.254-8.162-.001z"/>
+      <symbol id="flask-7" viewBox="0 0 24 24">
+        <path d="M20.759 20.498c-2.342-3.663-5.575-6.958-5.743-11.498H13c.173 5.212 3.512 8.539 5.953 12.356.143.302-.068.644-.377.644h-1.264l-4.734-7h-3.52c.873-1.665 1.85-3.414 1.936-6h-2.01c-.169 4.543-3.421 7.864-5.743 11.498-.165.347-.241.707-.241 1.057.0 1.283 1.023 2.445 2.423 2.445h13.153c1.4.0 2.424-1.162 2.424-2.446.0-.35-.076-.709-.241-1.056zm-4.759-15.498c0 1.105-.896 2-2 2s-2-.895-2-2 .896-2 2-2 2 .895 2 2zm-5-1.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5.672-1.5 1.5-1.5 1.5.671 1.5 1.5zm0 3.5c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm3-6c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1z"/>
       </symbol>
 
     
@@ -340,104 +294,41 @@
     
 
   
-    
-    
-    
-    
-
-    
-      
-
-      <symbol id="tagert" viewBox="0 0 24 24">
-        <path d="M6.56 4.438c.585.586.585 1.539.001 2.123C6.276 6.844 5.9 7 5.5 7s-.777-.156-1.06-.438c-.585-.586-.586-1.538-.001-2.123.284-.283.661-.439 1.062-.439.4.0.776.156 1.059.438zM24 13.396 13.391 24 0 10.609V0h10.605L24 13.396zm-16.732-9.665c-.488-.487-1.127-.731-1.767-.731-.641.0-1.28.244-1.769.732-.977.976-.977 2.558.0 3.536.489.488 1.128.732 1.768.732s1.279-.244 1.768-.733c.976-.976.976-2.558.0-3.536z" id="path2" />
-      </symbol>
-
-    
-
-  
-    
-    
-    
-    
-
-    
-      
-
-      <symbol id="tag-19" viewBox="0 0 24 24">
-        <path d="M10.773 21.585 9.405 23-1 12.571V4h2v7.719l9.773 9.866zM12.772 1H3v9.772L15.074 23 25 13.15 12.772 1zM8 8c-1.105.0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z"/>
-      </symbol>
-
-    
-
-  
 
 </svg>
-<style>[data-budnav=section-toggle]{display:none}[data-budnav=section-toggle] ~ ul{display:none}[data-budnav=section-toggle]:disabled+label{cursor:default;opacity:0.6}[data-budnav=section-toggle]:checked+label>div>svg .budnav__svg--closed{display:none}[data-budnav=section-toggle]:checked+label>div>svg .budnav__svg--open{display:block}[data-budnav=section-toggle]+label>div>svg .budnav__svg--closed{display:block}[data-budnav=section-toggle]+label>div>svg .budnav__svg--open{display:none}[data-budnav=section-toggle]+label+ul{margin:0 0 0 .666rem;font-size:100%}[data-budnav=section-toggle]:checked:not(:disabled) ~ ul{display:block}[data-budnav=main] svg{display:inline-block}[data-budnav=main] svg:before{content:''}[data-budnav=main] label{cursor:pointer}[data-budnav=main] label:focus{outline:none}[data-budnav=main] ul,[data-budnav=main] li{padding:0;margin:0;list-style:none}
+<style>[data-budnav=section-toggle]{display:none}[data-budnav=section-toggle]~ul{display:none}[data-budnav=section-toggle]:disabled+label{cursor:default;opacity:0.6}[data-budnav=section-toggle]:checked+label>div .budnav__svg--open{display:block}[data-budnav=section-toggle]:checked+label>div .budnav__svg--closed{display:none}[data-budnav=section-toggle]+label>div .budnav__svg--closed{display:block}[data-budnav=section-toggle]+label>div .budnav__svg--open{display:none}[data-budnav=section-toggle]+label+ul{margin:0 0 0 .666rem;font-size:100%}[data-budnav=section-toggle]:checked:not(:disabled)~ul{display:block}[data-budnav=main] svg{display:inline-block}[data-budnav=main] svg:before{content:''}[data-budnav=main] label{cursor:pointer}[data-budnav=main] label:focus{outline:none}[data-budnav=main] ul,[data-budnav=main] li{padding:0;margin:0;list-style:none}
 </style>
 <nav data-budnav="main" class="budnav">
   
 
 
+
 <ul>
   
+    
+
+    
+    
+    
+
+  
+    
 
     
     
     
 
+  
+    
+
+    
+    
     
       
 
 
 
 
-
-
-
-
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-<li>
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-    <li>
-      
-      
 
 
 
@@ -445,17 +336,1038 @@
 
 <input 
   data-budnav="section-toggle" 
+  data-budnav-parent="root"
   type="checkbox" 
-  id="14.099497465" 
+  id="root/blog" 
    checked 
 />
-<label for="14.099497465">
+<label for="root/blog">
   <div class="budnav__folder " >
     
   
-  <svg>
-    <use href='#info-7' xlink:href='#info-7'/>
-  </svg>
+  
+    <svg>
+      <use href='#quote-7' xlink:href='#quote-7'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    blog
+  </div>
+</label>
+
+<ul><li>
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root/blog"
+  type="checkbox" 
+  id="root/blog/2020" 
+   checked 
+/>
+<label for="root/blog/2020">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg class="budnav__svg--closed">
+      <use href='#folder-closed' xlink:href='#folder-closed'/>
+    </svg>
+    <svg class="budnav__svg--open">
+      <use href='#folder-open' xlink:href='#folder-open'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    2020
+  </div>
+</label>
+<ul>
+  
+  <li>
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root/blog/2020"
+  type="checkbox" 
+  id="root/blog/2020/March" 
+   checked 
+/>
+<label for="root/blog/2020/March">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg class="budnav__svg--closed">
+      <use href='#folder-closed' xlink:href='#folder-closed'/>
+    </svg>
+    <svg class="budnav__svg--open">
+      <use href='#folder-open' xlink:href='#folder-open'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    March
+  </div>
+</label>
+<ul>
+<li>
+  
+  
+  <a href="https://budrich.github.io/blog/2003/make-slides/" >
+  
+    <div  class="budnav__link " >
+    
+
+
+
+
+    
+    
+
+    <time>07</time> <span>Make Slides</span>
+    </div>
+  
+  </a>
+  
+</li>
+<li>
+  
+  
+  <a href="https://budrich.github.io/blog/2003/centered-terminal/" >
+  
+    <div  class="budnav__link " >
+    
+
+
+
+
+    
+    
+
+    <time>04</time> <span>Centered Terminal</span>
+    </div>
+  
+  </a>
+  
+</li></ul>
+    </li>
+      </ul>
+    </li>
+  <li>
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root/blog"
+  type="checkbox" 
+  id="root/blog/2018" 
+  
+/>
+<label for="root/blog/2018">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg class="budnav__svg--closed">
+      <use href='#folder-closed' xlink:href='#folder-closed'/>
+    </svg>
+    <svg class="budnav__svg--open">
+      <use href='#folder-open' xlink:href='#folder-open'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    2018
+  </div>
+</label>
+<ul>
+  
+  <li>
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root/blog/2018"
+  type="checkbox" 
+  id="root/blog/2018/April" 
+  
+/>
+<label for="root/blog/2018/April">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg class="budnav__svg--closed">
+      <use href='#folder-closed' xlink:href='#folder-closed'/>
+    </svg>
+    <svg class="budnav__svg--open">
+      <use href='#folder-open' xlink:href='#folder-open'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    April
+  </div>
+</label>
+<ul>
+<li>
+  
+  
+  <a href="https://budrich.github.io/blog/1804/simplesyntax/" >
+  
+    <div  class="budnav__link " >
+    
+
+
+
+
+    
+    
+
+    <time>02</time> <span>SimpleSyntax</span>
+    </div>
+  
+  </a>
+  
+</li></ul>
+    </li>
+      </ul>
+    </li>
+  <li>
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root/blog"
+  type="checkbox" 
+  id="root/blog/2017" 
+  
+/>
+<label for="root/blog/2017">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg class="budnav__svg--closed">
+      <use href='#folder-closed' xlink:href='#folder-closed'/>
+    </svg>
+    <svg class="budnav__svg--open">
+      <use href='#folder-open' xlink:href='#folder-open'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    2017
+  </div>
+</label>
+<ul>
+  
+  <li>
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root/blog/2017"
+  type="checkbox" 
+  id="root/blog/2017/December" 
+  
+/>
+<label for="root/blog/2017/December">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg class="budnav__svg--closed">
+      <use href='#folder-closed' xlink:href='#folder-closed'/>
+    </svg>
+    <svg class="budnav__svg--open">
+      <use href='#folder-open' xlink:href='#folder-open'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    December
+  </div>
+</label>
+<ul>
+<li>
+  
+  
+  <a href="https://budrich.github.io/blog/1712/ass-divided/" >
+  
+    <div  class="budnav__link " >
+    
+
+
+
+
+    
+    
+
+    <time>23</time> <span>ass divided</span>
+    </div>
+  
+  </a>
+  
+</li></ul>
+    </li><li>
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root/blog/2017"
+  type="checkbox" 
+  id="root/blog/2017/September" 
+  
+/>
+<label for="root/blog/2017/September">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg class="budnav__svg--closed">
+      <use href='#folder-closed' xlink:href='#folder-closed'/>
+    </svg>
+    <svg class="budnav__svg--open">
+      <use href='#folder-open' xlink:href='#folder-open'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    September
+  </div>
+</label>
+<ul>
+<li>
+  
+  
+  <a href="https://budrich.github.io/blog/1709/mouseback/" >
+  
+    <div  class="budnav__link " >
+    
+
+
+
+
+    
+    
+
+    <time>25</time> <span>mouseback</span>
+    </div>
+  
+  </a>
+  
+</li>
+<li>
+  
+  
+  <a href="https://budrich.github.io/blog/1709/swedish-keyboards/" >
+  
+    <div  class="budnav__link " >
+    
+
+
+
+
+    
+    
+
+    <time>25</time> <span>swedish keyboards</span>
+    </div>
+  
+  </a>
+  
+</li></ul>
+    </li>
+      </ul>
+    </li>
+  </ul>
+
+
+    
+    
+
+  
+    
+
+    
+    
+    
+      
+
+<li>
+  
+  <hr class="budnav__separator " >
+</li>
+
+
+
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://github.com/budlabs"  target="_blank">
+  
+    <div  class="budnav__link " >
+    
+  
+  
+    <svg>
+      <use href='#github-1' xlink:href='#github-1'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    github
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://youtube.com/c/dubbeltumme"  target="_blank">
+  
+    <div  class="budnav__link budnav__link--youtube" >
+    
+  
+  
+    <svg>
+      <use href='#youtube-6' xlink:href='#youtube-6'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    youtube
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://gitter.im/budlabs/community"  target="_blank">
+  
+    <div  class="budnav__link budnav__link--chat" >
+    
+  
+  
+    <svg>
+      <use href='#gitternew' xlink:href='#gitternew'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    gitter (chat)
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://www.bitchute.com/channel/budlabs/"  target="_blank">
+  
+    <div  class="budnav__link budnav__link--bitchute" >
+    
+  
+  
+    <svg>
+      <use href='#bcnew' xlink:href='#bcnew'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    bitchute
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://lbry.tv/@budlabs:c"  target="_blank">
+  
+    <div  class="budnav__link budnav__link--lbry" >
+    
+  
+  
+    <svg>
+      <use href='#lbrynew' xlink:href='#lbrynew'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    lbry
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+
+<li>
+  
+  <hr class="budnav__separator " >
+</li>
+
+
+
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://budrich.github.io/links/" >
+  
+    <div  class="budnav__link budnav__link--links" >
+    
+  
+  
+    <svg>
+      <use href='#link-3' xlink:href='#link-3'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    links
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+
+<li>
+  
+  <hr class="budnav__separator " >
+</li>
+
+
+
+
+    
+
+  
+    
+
+    
+    
+    
+      <li>
+        
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root"
+  type="checkbox" 
+  id="root/projects" 
+  
+/>
+<label for="root/projects">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg>
+      <use href='#gear-4' xlink:href='#gear-4'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    projects
+  </div>
+</label>
+
+        
+        
+
+
+
+<ul>
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://github.com/budlabs/i3ass"  target="_blank">
+  
+    <div  class="budnav__link " >
+    
+  
+  
+    <svg>
+      <use href='#github-1' xlink:href='#github-1'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    i3ass
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://github.com/budlabs/bashbud"  target="_blank">
+  
+    <div  class="budnav__link " >
+    
+  
+  
+    <svg>
+      <use href='#github-1' xlink:href='#github-1'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    bashbud
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://github.com/budlabs/mondo"  target="_blank">
+  
+    <div  class="budnav__link " >
+    
+  
+  
+    <svg>
+      <use href='#github-1' xlink:href='#github-1'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    mondo
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://github.com/budlabs/bwp"  target="_blank">
+  
+    <div  class="budnav__link " >
+    
+  
+  
+    <svg>
+      <use href='#github-1' xlink:href='#github-1'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    bwp
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+<li>
+  
+  
+  <a href="https://github.com/budlabs/polify"  target="_blank">
+  
+    <div  class="budnav__link " >
+    
+  
+  
+    <svg>
+      <use href='#github-1' xlink:href='#github-1'/>
+    </svg>
+  
+
+
+
+
+
+    
+    
+
+    polify
+    </div>
+  
+  </a>
+  
+</li>
+
+    
+
+  
+</ul>
+
+      </li>
+
+    
+
+  
+    
+
+    
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+    
+  
+
+  
+
+
+
+<li>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    <li>
+      
+      
+
+
+
+
+<input 
+  data-budnav="section-toggle" 
+  data-budnav-parent="root"
+  type="checkbox" 
+  id="root/about" 
+  
+/>
+<label for="root/about">
+  <div class="budnav__folder " >
+    
+  
+  
+    <svg>
+      <use href='#info-7' xlink:href='#info-7'/>
+    </svg>
+  
 
 
 
@@ -476,14 +1388,17 @@
       
 <li>
   
+  
   <a href="https://budrich.github.io/about/this-page/" >
   
-    <div  class="budnav__link  budnav__active" >
+    <div  class="budnav__link " >
     
   
-  <svg>
-    <use href='#file' xlink:href='#file'/>
-  </svg>
+  
+    <svg>
+      <use href='#file' xlink:href='#file'/>
+    </svg>
+  
 
 
 
@@ -503,14 +1418,17 @@
       
 <li>
   
+  
   <a href="https://budrich.github.io/about/budrich/" >
   
     <div  class="budnav__link " >
     
   
-  <svg>
-    <use href='#file' xlink:href='#file'/>
-  </svg>
+  
+    <svg>
+      <use href='#file' xlink:href='#file'/>
+    </svg>
+  
 
 
 
@@ -530,14 +1448,17 @@
       
 <li>
   
+  
   <a href="https://budrich.github.io/about/budlabs/" >
   
     <div  class="budnav__link " >
     
   
-  <svg>
-    <use href='#file' xlink:href='#file'/>
-  </svg>
+  
+    <svg>
+      <use href='#file' xlink:href='#file'/>
+    </svg>
+  
 
 
 
@@ -563,767 +1484,17 @@
     
 
   
-
-    
-    
-    
-
-    
-      
-
-
-
-
-
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.100690581" 
-   checked 
-/>
-<label for="14.100690581">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#quote-7' xlink:href='#quote-7'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    blog
-  </div>
-</label>
-<ul><li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.100888661" 
-   checked 
-/>
-<label for="14.100888661">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    2018
-  </div>
-</label>
-<ul>
-  <li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.101163449" 
-   checked 
-/>
-<label for="14.101163449">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    April
-  </div>
-</label>
-<ul>
-<li>
-  
-  <a href="https://budrich.github.io/posts/simplesyntax/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>02</time> <span>SimpleSyntax</span>
-    </div>
-  
-  </a>
-  
-</li></ul>
-    </li><li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.101874398" 
-  
-/>
-<label for="14.101874398">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    January
-  </div>
-</label>
-<ul>
-<li>
-  
-  <a href="https://budrich.github.io/posts/new_ass_features/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>03</time> <span>new_ass_features</span>
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/posts/i3_flipping_tabs/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>03</time> <span>i3_flipping_tabs</span>
-    </div>
-  
-  </a>
-  
-</li></ul>
-    </li>
-      </ul>
-    </li>
-  <li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.103319896" 
-  
-/>
-<label for="14.103319896">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    2017
-  </div>
-</label>
-<ul>
-  <li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.103720282" 
-  
-/>
-<label for="14.103720282">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    December
-  </div>
-</label>
-<ul>
-<li>
-  
-  <a href="https://budrich.github.io/posts/ass_divided/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>23</time> <span>ass_divided</span>
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/posts/i3_size_matters/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>15</time> <span>i3_size_matters</span>
-    </div>
-  
-  </a>
-  
-</li></ul>
-    </li><li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.104716068" 
-  
-/>
-<label for="14.104716068">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    November
-  </div>
-</label>
-<ul>
-<li>
-  
-  <a href="https://budrich.github.io/posts/fixed_fixedsys/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>23</time> <span>fixed_fixedsys</span>
-    </div>
-  
-  </a>
-  
-</li></ul>
-    </li><li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.105444236" 
-  
-/>
-<label for="14.105444236">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    October
-  </div>
-</label>
-<ul>
-<li>
-  
-  <a href="https://budrich.github.io/posts/fresh_start/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>01</time> <span>fresh_start</span>
-    </div>
-  
-  </a>
-  
-</li></ul>
-    </li><li>
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.106210321" 
-  
-/>
-<label for="14.106210321">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    September
-  </div>
-</label>
-<ul>
-<li>
-  
-  <a href="https://budrich.github.io/posts/mouseback/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>25</time> <span>mouseback</span>
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/posts/swedish_keyboards/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>25</time> <span>swedish_keyboards</span>
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/posts/me_myself_and_i3/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>25</time> <span>me_myself_and_i3</span>
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/posts/i3_setup/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>25</time> <span>i3_setup</span>
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/posts/font_rendering/" >
-  
-    <div  class="budnav__link " >
-    
-
-
-
-
-    
-    
-
-    <time>25</time> <span>font_rendering</span>
-    </div>
-  
-  </a>
-  
-</li></ul>
-    </li>
-      </ul>
-    </li>
-  </ul>
-
-
-    
-    
-
-  
-
-    
-    
-    
-
-    
-      
-
-<li>
-  
-  <hr class="budnav__separator " >
-</li>
-
-
-
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://github.com/budlabs"  target="_blank">
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#github-1' xlink:href='#github-1'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    github
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://youtube.com/c/dubbeltumme"  target="_blank">
-  
-    <div  class="budnav__link budnav__link--youtube" >
-    
-  
-  <svg>
-    <use href='#youtube-6' xlink:href='#youtube-6'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    youtube
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://gitter.im/budlabs/community"  target="_blank">
-  
-    <div  class="budnav__link budnav__link--chat" >
-    
-  
-  <svg>
-    <use href='#gitternew' xlink:href='#gitternew'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    gitter (chat)
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
     
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://www.bitchute.com/channel/budlabs/"  target="_blank">
-  
-    <div  class="budnav__link budnav__link--bitchute" >
-    
-  
-  <svg>
-    <use href='#bcnew' xlink:href='#bcnew'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    bitchute
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://lbry.tv/@budlabs:c"  target="_blank">
-  
-    <div  class="budnav__link budnav__link--lbry" >
-    
-  
-  <svg>
-    <use href='#lbrynew' xlink:href='#lbrynew'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    lbry
-    </div>
-  
-  </a>
-  
-</li>
-      
 
     
-
-  
-
     
     
-    
-
-    
-      
 
-<li>
   
-  <hr class="budnav__separator " >
-</li>
-
-
-
-
     
 
-  
-
     
     
-    
-
     
       <li>
         
@@ -1331,514 +1502,22 @@
 
 
 
-
 <input 
   data-budnav="section-toggle" 
+  data-budnav-parent="root"
   type="checkbox" 
-  id="14.110197184" 
+  id="root/rss" 
   
 />
-<label for="14.110197184">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#gear-4' xlink:href='#gear-4'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    projects
-  </div>
-</label>
-
-        
-
-
-<ul>
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://github.com/budlabs/i3ass"  target="_blank">
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#github-1' xlink:href='#github-1'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    i3ass
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://github.com/budlabs/bashbud"  target="_blank">
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#github-1' xlink:href='#github-1'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    bashbud
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://github.com/budlabs/mondo"  target="_blank">
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#github-1' xlink:href='#github-1'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    mondo
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://github.com/budlabs/bwp"  target="_blank">
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#github-1' xlink:href='#github-1'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    bwp
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://github.com/budlabs/polify"  target="_blank">
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#github-1' xlink:href='#github-1'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    polify
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-</ul>
-
-      </li>
-
-    
-
-  
-
-    
-    
-    
-
-    
-      <li>
-        
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.111952123" 
-  
-/>
-<label for="14.111952123">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#flask-7' xlink:href='#flask-7'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    rice
-  </div>
-</label>
-
-        
-
-
-<ul>
-  
-
-    
-    
-    
-
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-<li>
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-    <li>
-      
-      
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.112493707" 
-  
-/>
-<label for="14.112493707">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    dots
-  </div>
-</label>
-
-      <ul>
-      
-    </li>
-    
-  </ul>
-
-</li>
-
-
-
-
-    
-
-  
-
-    
-    
-    
-
-    
-      <li>
-        
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.11272396" 
-  
-/>
-<label for="14.11272396">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#folder' xlink:href='#folder'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    scripts
-  </div>
-</label>
-
-        
-
-
-<ul>
-  
-</ul>
-
-      </li>
-
-    
-
-  
-</ul>
-
-      </li>
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-
-<li>
-  
-  <hr class="budnav__separator " >
-</li>
-
-
-
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-<li>
-  
-  <a href="https://youtube.com/c/dubbeltumme"  target="_blank">
-  
-    <div  class="budnav__link budnav__link--links" >
-    
-  
-  <svg>
-    <use href='#link-3' xlink:href='#link-3'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    links
-    </div>
-  
-  </a>
-  
-</li>
-      
-
-    
-
-  
-
-    
-    
-    
-
-    
-      
-
-<li>
-  
-  <hr class="budnav__separator " >
-</li>
-
-
-
-
-    
-
-  
-
-    
-    
-    
-
-    
-      <li>
-        
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.113566579" 
-  
-/>
-<label for="14.113566579">
+<label for="root/rss">
   <div class="budnav__folder sidebar__folder" >
     
   
-  <svg>
-    <use href='#rss-feed-3' xlink:href='#rss-feed-3'/>
-  </svg>
+  
+    <svg>
+      <use href='#rss-feed-3' xlink:href='#rss-feed-3'/>
+    </svg>
+  
 
 
 
@@ -1852,27 +1531,31 @@
 </label>
 
         
+        
+
 
 
 <ul>
   
-
-    
-    
     
 
+    
+    
     
       
 <li>
+  
   
   <a href="https://blog.rss"  target="_blank">
   
     <div  class="budnav__link " >
     
   
-  <svg>
-    <use href='#rss-feed-1' xlink:href='#rss-feed-1'/>
-  </svg>
+  
+    <svg>
+      <use href='#rss-feed-1' xlink:href='#rss-feed-1'/>
+    </svg>
+  
 
 
 
@@ -1887,28 +1570,29 @@
   </a>
   
 </li>
-      
 
     
 
   
-
-    
-    
     
 
+    
+    
     
       
 <li>
+  
   
   <a href="https://youtube.rss"  target="_blank">
   
     <div  class="budnav__link " >
     
   
-  <svg>
-    <use href='#rss-feed-1' xlink:href='#rss-feed-1'/>
-  </svg>
+  
+    <svg>
+      <use href='#rss-feed-1' xlink:href='#rss-feed-1'/>
+    </svg>
+  
 
 
 
@@ -1923,164 +1607,6 @@
   </a>
   
 </li>
-      
-
-    
-
-  
-</ul>
-
-      </li>
-
-    
-
-  
-
-    
-    
-    
-
-    
-      <li>
-        
-
-
-
-
-
-<input 
-  data-budnav="section-toggle" 
-  type="checkbox" 
-  id="14.11451047" 
-  
-/>
-<label for="14.11451047">
-  <div class="budnav__folder " >
-    
-  
-  <svg>
-    <use href='#tag-19' xlink:href='#tag-19'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    tags
-  </div>
-</label>
-
-        
-
-
-<ul>
-  
-
-    
-    
-    
-
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-<li>
-  
-  <a href="https://budrich.github.io/tags/linklord/" >
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#tagert' xlink:href='#tagert'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    linklord 1
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/tags/testing/" >
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#tagert' xlink:href='#tagert'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    testing 2
-    </div>
-  
-  </a>
-  
-</li>
-<li>
-  
-  <a href="https://budrich.github.io/tags/markdown/" >
-  
-    <div  class="budnav__link " >
-    
-  
-  <svg>
-    <use href='#tagert' xlink:href='#tagert'/>
-  </svg>
-
-
-
-
-
-    
-    
-
-    markdown 2
-    </div>
-  
-  </a>
-  
-</li>
-
 
     
 
@@ -2102,8 +1628,8 @@
     <footer>
       
       <div class="quote__container">
-        I don&#39;t mean to sound bitter, cold, or cruel, but I am, so that&#39;s how it comes out.
-— Bill Hicks
+        I don&#39;t mean to sound bitter, cold, or cruel, but
+I am, so that&#39;s how it comes out. — Bill Hicks
 
       </div>
       
@@ -2118,59 +1644,48 @@
 
 
   <div class="banner__container">
-    <div><div class="banner__container--ascii">
-    <pre class="banner__ascii ascii ansi2html-content"><span class="ansi38-178">   </span><span class="ansi38-214">██ </span><span class="ansi38-208">  █</span><span class="ansi38-209">█   </span><span class="ansi38-203">   </span><span class="ansi38-204">██ </span><span class="ansi38-198">    </span><span class="ansi38-199">   </span><span class="ansi38-163">   </span><span class="ansi38-164">    </span><span class="ansi38-128">   </span><span class="ansi38-129">   </span><span class="ansi38-93">    </span><span class="ansi38-99">   </span><span class="ansi38-63">   </span><span class="ansi38-69">    </span><span class="ansi38-33">   </span><span class="ansi38-39">   </span><span class="ansi38-38">   
-</span><span class="ansi38-178">  </span><span class="ansi38-214">░██</span><span class="ansi38-208">  ░█</span><span class="ansi38-209">█  </span><span class="ansi38-203">   </span><span class="ansi38-204">░░ </span><span class="ansi38-198">    </span><span class="ansi38-199">   </span><span class="ansi38-163">   </span><span class="ansi38-164"> ███</span><span class="ansi38-128">███</span><span class="ansi38-129">   </span><span class="ansi38-93">    </span><span class="ansi38-99">   </span><span class="ansi38-63">   </span><span class="ansi38-69">████</span><span class="ansi38-33">█  </span><span class="ansi38-39">   </span><span class="ansi38-38">    
-</span><span class="ansi38-178"> </span><span class="ansi38-214">███</span><span class="ansi38-208">███</span><span class="ansi38-209">░██ </span><span class="ansi38-203">   </span><span class="ansi38-204">  ██</span><span class="ansi38-198">  █</span><span class="ansi38-199">███</span><span class="ansi38-163">██ </span><span class="ansi38-164"> ░██</span><span class="ansi38-128">░░░</span><span class="ansi38-129">██ </span><span class="ansi38-93"> ███</span><span class="ansi38-99">███</span><span class="ansi38-63">   █</span><span class="ansi38-69">█░░</span><span class="ansi38-33">░██</span><span class="ansi38-39">  █</span><span class="ansi38-38">████</span><span class="ansi38-44"> 
-</span><span class="ansi38-214">░░░</span><span class="ansi38-208">██░</span><span class="ansi38-209"> ░██</span><span class="ansi38-203">███</span><span class="ansi38-204">█ ░</span><span class="ansi38-198">██ █</span><span class="ansi38-199">█░░</span><span class="ansi38-163">░░ </span><span class="ansi38-164">  ░█</span><span class="ansi38-128">█  </span><span class="ansi38-129">░██</span><span class="ansi38-93"> ░░░</span><span class="ansi38-99">░░░</span><span class="ansi38-63">██ </span><span class="ansi38-69">░██ </span><span class="ansi38-33"> ░█</span><span class="ansi38-39">█ ██</span><span class="ansi38-38">░░░</span><span class="ansi38-44">██
-</span><span class="ansi38-214">  </span><span class="ansi38-208">░██</span><span class="ansi38-209">  ░█</span><span class="ansi38-203">█░░</span><span class="ansi38-204">░██</span><span class="ansi38-198">░██░</span><span class="ansi38-199">░██</span><span class="ansi38-163">███</span><span class="ansi38-164">   ░</span><span class="ansi38-128">███</span><span class="ansi38-129">███ </span><span class="ansi38-93">  █</span><span class="ansi38-99">███</span><span class="ansi38-63">███ </span><span class="ansi38-69">░░█</span><span class="ansi38-33">███</span><span class="ansi38-39">██░</span><span class="ansi38-38">████</span><span class="ansi38-44">███
-</span><span class="ansi38-214"> </span><span class="ansi38-208"> ░█</span><span class="ansi38-209">█  ░</span><span class="ansi38-203">██ </span><span class="ansi38-204"> ░█</span><span class="ansi38-198">█░██</span><span class="ansi38-199"> ░░</span><span class="ansi38-163">░░░</span><span class="ansi38-164">██  </span><span class="ansi38-128">░██</span><span class="ansi38-129">░░░</span><span class="ansi38-93">   █</span><span class="ansi38-99">█░░</span><span class="ansi38-63">░░█</span><span class="ansi38-69">█  ░</span><span class="ansi38-33">░░░</span><span class="ansi38-39">░██</span><span class="ansi38-38">░██░</span><span class="ansi38-44">░░░</span><span class="ansi38-43"> 
-</span><span class="ansi38-208">  ░</span><span class="ansi38-209">░██ </span><span class="ansi38-203">░██</span><span class="ansi38-204">  ░</span><span class="ansi38-198">██░█</span><span class="ansi38-199">█ █</span><span class="ansi38-163">███</span><span class="ansi38-164">██  </span><span class="ansi38-128"> ░█</span><span class="ansi38-129">█  </span><span class="ansi38-93">   ░</span><span class="ansi38-99">░██</span><span class="ansi38-63">███</span><span class="ansi38-69">███ </span><span class="ansi38-33"> ██</span><span class="ansi38-39">███</span><span class="ansi38-38"> ░░█</span><span class="ansi38-44">███</span><span class="ansi38-43">██
-</span><span class="ansi38-208">  </span><span class="ansi38-209"> ░░ </span><span class="ansi38-203"> ░░</span><span class="ansi38-204">   </span><span class="ansi38-198">░░ ░</span><span class="ansi38-199">░ ░</span><span class="ansi38-163">░░░</span><span class="ansi38-164">░░  </span><span class="ansi38-128">  ░</span><span class="ansi38-129">░  </span><span class="ansi38-93">    </span><span class="ansi38-99"> ░░</span><span class="ansi38-63">░░░</span><span class="ansi38-69">░░░ </span><span class="ansi38-33"> ░░</span><span class="ansi38-39">░░░</span><span class="ansi38-38">   ░</span><span class="ansi38-44">░░░</span><span class="ansi38-43">░░ 
+    <div class="banner__container--ascii">
+    <pre class="banner__ascii ascii ansi2html-content"><span class="ansi38-129">   </span><span class="ansi38-93">██ </span><span class="ansi38-99">  █</span><span class="ansi38-63">█   </span><span class="ansi38-69">   </span><span class="ansi38-33">██ </span><span class="ansi38-39">    </span><span class="ansi38-38">   </span><span class="ansi38-44">   </span><span class="ansi38-43">    </span><span class="ansi38-49">   </span><span class="ansi38-48">   </span><span class="ansi38-84">    </span><span class="ansi38-83">   </span><span class="ansi38-119">   </span><span class="ansi38-118">    </span><span class="ansi38-154">   </span><span class="ansi38-148">   </span><span class="ansi38-184">   
+</span><span class="ansi38-129">  </span><span class="ansi38-93">░██</span><span class="ansi38-99">  ░█</span><span class="ansi38-63">█  </span><span class="ansi38-69">   </span><span class="ansi38-33">░░ </span><span class="ansi38-39">    </span><span class="ansi38-38">   </span><span class="ansi38-44">   </span><span class="ansi38-43"> ███</span><span class="ansi38-49">███</span><span class="ansi38-48">   </span><span class="ansi38-84">    </span><span class="ansi38-83">   </span><span class="ansi38-119">   </span><span class="ansi38-118">████</span><span class="ansi38-154">█  </span><span class="ansi38-148">   </span><span class="ansi38-184">    
+</span><span class="ansi38-129"> </span><span class="ansi38-93">███</span><span class="ansi38-99">███</span><span class="ansi38-63">░██ </span><span class="ansi38-69">   </span><span class="ansi38-33">  ██</span><span class="ansi38-39">  █</span><span class="ansi38-38">███</span><span class="ansi38-44">██ </span><span class="ansi38-43"> ░██</span><span class="ansi38-49">░░░</span><span class="ansi38-48">██ </span><span class="ansi38-84"> ███</span><span class="ansi38-83">███</span><span class="ansi38-119">   █</span><span class="ansi38-118">█░░</span><span class="ansi38-154">░██</span><span class="ansi38-148">  █</span><span class="ansi38-184">████</span><span class="ansi38-178"> 
+</span><span class="ansi38-93">░░░</span><span class="ansi38-99">██░</span><span class="ansi38-63"> ░██</span><span class="ansi38-69">███</span><span class="ansi38-33">█ ░</span><span class="ansi38-39">██ █</span><span class="ansi38-38">█░░</span><span class="ansi38-44">░░ </span><span class="ansi38-43">  ░█</span><span class="ansi38-49">█  </span><span class="ansi38-48">░██</span><span class="ansi38-84"> ░░░</span><span class="ansi38-83">░░░</span><span class="ansi38-119">██ </span><span class="ansi38-118">░██ </span><span class="ansi38-154"> ░█</span><span class="ansi38-148">█ ██</span><span class="ansi38-184">░░░</span><span class="ansi38-178">██
+</span><span class="ansi38-93">  </span><span class="ansi38-99">░██</span><span class="ansi38-63">  ░█</span><span class="ansi38-69">█░░</span><span class="ansi38-33">░██</span><span class="ansi38-39">░██░</span><span class="ansi38-38">░██</span><span class="ansi38-44">███</span><span class="ansi38-43">   ░</span><span class="ansi38-49">███</span><span class="ansi38-48">███ </span><span class="ansi38-84">  █</span><span class="ansi38-83">███</span><span class="ansi38-119">███ </span><span class="ansi38-118">░░█</span><span class="ansi38-154">███</span><span class="ansi38-148">██░</span><span class="ansi38-184">████</span><span class="ansi38-178">███
+</span><span class="ansi38-93"> </span><span class="ansi38-99"> ░█</span><span class="ansi38-63">█  ░</span><span class="ansi38-69">██ </span><span class="ansi38-33"> ░█</span><span class="ansi38-39">█░██</span><span class="ansi38-38"> ░░</span><span class="ansi38-44">░░░</span><span class="ansi38-43">██  </span><span class="ansi38-49">░██</span><span class="ansi38-48">░░░</span><span class="ansi38-84">   █</span><span class="ansi38-83">█░░</span><span class="ansi38-119">░░█</span><span class="ansi38-118">█  ░</span><span class="ansi38-154">░░░</span><span class="ansi38-148">░██</span><span class="ansi38-184">░██░</span><span class="ansi38-178">░░░</span><span class="ansi38-214"> 
+</span><span class="ansi38-99">  ░</span><span class="ansi38-63">░██ </span><span class="ansi38-69">░██</span><span class="ansi38-33">  ░</span><span class="ansi38-39">██░█</span><span class="ansi38-38">█ █</span><span class="ansi38-44">███</span><span class="ansi38-43">██  </span><span class="ansi38-49"> ░█</span><span class="ansi38-48">█  </span><span class="ansi38-84">   ░</span><span class="ansi38-83">░██</span><span class="ansi38-119">███</span><span class="ansi38-118">███ </span><span class="ansi38-154"> ██</span><span class="ansi38-148">███</span><span class="ansi38-184"> ░░█</span><span class="ansi38-178">███</span><span class="ansi38-214">██
+</span><span class="ansi38-99">  </span><span class="ansi38-63"> ░░ </span><span class="ansi38-69"> ░░</span><span class="ansi38-33">   </span><span class="ansi38-39">░░ ░</span><span class="ansi38-38">░ ░</span><span class="ansi38-44">░░░</span><span class="ansi38-43">░░  </span><span class="ansi38-49">  ░</span><span class="ansi38-48">░  </span><span class="ansi38-84">    </span><span class="ansi38-83"> ░░</span><span class="ansi38-119">░░░</span><span class="ansi38-118">░░░ </span><span class="ansi38-154"> ░░</span><span class="ansi38-148">░░░</span><span class="ansi38-184">   ░</span><span class="ansi38-178">░░░</span><span class="ansi38-214">░░ 
 </span></pre>
     <h1 class="banner__heading">
       This Page
     </h1>
   </div>
   <div class="banner__infoline">
-    <div class="banner__infoline--readtime ">1 minute read</div>
-    <div class="banner__infoline--date">2019-12-13</div>
-      
-      <div class="banner__infoline--taglist">
-        
-          <div class="banner__infoline--tag">
-            
-            <a href="https://budrich.github.io/tags/markdown/">
-            #markdown
-            </a>
-          </div>
-        
-          <div class="banner__infoline--tag">
-            
-            <a href="https://budrich.github.io/tags/testing/">
-            #testing
-            </a>
-          </div>
-        
-          <div class="banner__infoline--tag">
-            
-            <a href="https://budrich.github.io/tags/linklord/">
-            #linklord
-            </a>
-          </div>
-        
-      </div>
-      
-  </div>
+  <div class="banner__infoline--readtime ">1 minute read</div>
+  <div class="banner__infoline--date">2019-12-13</div>
+  
+<div class="banner__infoline--taglist">
+
 </div>
+
+</div>
+
+  
 
  
   </div>
   
-  <p><em>No JavaScript or cookies have been used <del>or hurt</del> in the making of this page.</em></p>
-<p>This page was created and designed from scratch by <a href="/about/budrich">budRich</a> 2019-2020. It is a Static site generated by <a href="https://gohugo.io">Hugo</a>. The ASCII-art banners are generated from the pipe: <code>figlet -f 3d.flf &quot;BANNER_TEXT&quot; | lolcat -f | ansi2html</code>. Where <strong>3d.flf</strong> is a figlet-font created by <a href="https://github.com/xero/figlet-fonts">xero</a>.</p>
-<p>The brick wall background, is an <strong>svg</strong> file from <a href="https://www.heropatterns.com/">Hero Patterns</a>.</p>
-<p>The sidebar tree navigation, have been isolated to a standalone <a href="https://gohugo.io/hugo-modules/">Hugo module</a> and can easily be integrated in any Hugo project.</p>
+  <p>This page was created and designed from scratch by 
+<a href="../../about/budrich/">budRich</a>
+ 2019-2020. It is a Static site generated by 
+<a href="https://gohugo.io" target="_blank">Hugo</a>
+. The ASCII-art banners are generated from the pipe: <code>figlet -f 3d.flf &quot;BANNER_TEXT&quot; | lolcat -f | ansi2html</code>. Where <strong>3d.flf</strong> is a figlet-font created by 
+<a href="https://github.com/xero/figlet-fonts" target="_blank">xero</a>
+.</p>
+<p>The brick wall background, is an <strong>svg</strong> file from 
+<a href="https://www.heropatterns.com/" target="_blank">Hero Patterns</a>
+.</p>
+<p>
+<a href="https://github.com/turbolinks/turbolinks" target="_blank">Turbolinks</a>
+ is being used for clientside routing.</p>
 
 
   
@@ -2181,21 +1696,7 @@
       </div>
     </main>
 
-  <div style="position:fixed;right:0;top:0;padding:.5rem;background-color:white;">
-  <div id="viewportinfo"></div>
-  <button onclick="btnClick()" class=pillbutton>Hello</button>
-  <div id="testbox"></div>
-</div>
-
-<script>
-function btnClick() {
-  var bn = document.getElementById("urban");
-  var st = bn.scrollTop
   
-  document.getElementById("testbox").innerHTML = st;
-}
-</script>
-
   </body>
 </html>
 
