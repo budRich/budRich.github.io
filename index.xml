@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The budBlog</title>
+    <link>https://budrich.github.io/</link>
+    <description>Recent content on The budBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2020 14:34:25 +0100</lastBuildDate>
+    
+  <atom:link href="https://budrich.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Make Slides</title>
+      <link>https://budrich.github.io/blog/2003/make-slides/</link>
+      <pubDate>Sat, 07 Mar 2020 14:34:25 +0100</pubDate>
+      
+      <guid>https://budrich.github.io/blog/2003/make-slides/</guid>
+      <description>&lt;p&gt;In an 
+&lt;a href=&#34;./blog/2003/centered-terminal/&#34;&gt;earlier post&lt;/a&gt;
+ I demonstrated how to center a block of text in a terminal. Here we continue to build on that script to create a slide deck.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;/usr/share/figlet/fonts&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centered Terminal</title>
+      <link>https://budrich.github.io/blog/2003/centered-terminal/</link>
+      <pubDate>Wed, 04 Mar 2020 21:26:07 +0100</pubDate>
+      
+      <guid>https://budrich.github.io/blog/2003/centered-terminal/</guid>
+      <description>&lt;p&gt;The banners on this page is generated from the output from &lt;code&gt;figlet&lt;/code&gt;.
+I  found a fun way to create terminal &amp;ldquo;&lt;em&gt;slides&lt;/em&gt;&amp;rdquo; when figuring out how to center the banners.&lt;/p&gt;
+&lt;p&gt;To center something (a block of text) in relation to something else (a terminal) you need to know the &lt;strong&gt;width&lt;/strong&gt; and &lt;strong&gt;height&lt;/strong&gt; of the objects.
+A terminal window consist of cells ordered in &lt;strong&gt;columns&lt;/strong&gt; (width) and &lt;strong&gt;lines&lt;/strong&gt; (height).&lt;/p&gt;
+&lt;p&gt;The easiest and most reliable (maybe not the most efficient) way to get the dimensions of a terminal window is to use the commands:
+&lt;code&gt;tput lines&lt;/code&gt; and &lt;code&gt;tput cols&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The dimensions of a block of text is the number of lines the block consist of (height) and the longest line in the block (width).
+We can use the &lt;code&gt;wc(1)&lt;/code&gt; command to get both these metrics.
+&lt;code&gt;wc -l&lt;/code&gt; prints the number of lines,
+&lt;code&gt;wc -L&lt;/code&gt; prints the number of characters (columns) in the longest line.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;block&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; EOB
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; ██       ██                  ██    
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;░██      ░██                 ░██    
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;░██      ░██  ██████   █████ ░██  ██
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;░██████  ░██ ██░░░░██ ██░░░██░██ ██ 
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;░██░░░██ ░██░██   ░██░██  ░░ ░████  
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;░██  ░██ ░██░██   ░██░██   ██░██░██ 
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;░██████  ███░░██████ ░░█████ ░██░░██
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;░░░░░   ░░░  ░░░░░░   ░░░░░  ░░  ░░ 
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;EOB&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;block_width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;wc -L &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$block&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;block_height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;wc -l &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$block&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;terminal_width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;tput cols&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;terminal_height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;tput lines&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;the block is &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$block_width&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; columns wide&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;and &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$block_height&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; lines high&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Running the script above will print:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;the block is 36 columns wide  
+and 8 lines high
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To center the block horizontally we want an equal amount of blank &lt;strong&gt;columns&lt;/strong&gt; to the left and to the right of the block.
+The total number of blank columns is:
+&lt;code&gt;blank_columns=$((terminal_width - block_width))&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;So we want to indent each line of the block an amount of spaces equal to half of total number of blank columns.&lt;/p&gt;
+&lt;p&gt;First I like to create a string, that contains the indentation:
+&lt;code&gt;indentation=$(printf &amp;quot;%$((blank_columns/2))s&amp;quot; &amp;quot; &amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then use &lt;code&gt;sed(1)&lt;/code&gt; to replace the beginning of each line in the block, with our indentation string:
+&lt;code&gt;block=$(sed &amp;quot;s/^/${indentation}/g&amp;quot; &amp;lt;&amp;lt;&amp;lt; &amp;quot;$block&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To also center the block vertically centered,
+we do something similar:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;blank_lines=$((terminal_height - block_height))
+vpad=$(printf &amp;quot;%$((blank_lines/2))s&amp;quot; &amp;quot; &amp;quot;)
+vpad=${vpad// /$&#39;\n&#39;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;First create a string (&lt;strong&gt;$vpad&lt;/strong&gt;) containing a number of spaces equal to the number of blank lines we want to pad.
+Then replace the spaces with newline characters (&lt;code&gt;$&#39;\n&#39;&lt;/code&gt;).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;clear
+printf &#39;%s&#39; &amp;quot;$vpad&amp;quot; &amp;quot;$block&amp;quot; &amp;quot;$vpad&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will clear the screen and print our block in the center.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SimpleSyntax</title>
+      <link>https://budrich.github.io/blog/1804/simplesyntax/</link>
+      <pubDate>Mon, 02 Apr 2018 16:09:59 +0200</pubDate>
+      
+      <guid>https://budrich.github.io/blog/1804/simplesyntax/</guid>
+      <description>&lt;p&gt;I created this simple &lt;strong&gt;Sublime Text&lt;/strong&gt; package to get a simple syntax recognition for files where the syntax isn&amp;rsquo;t obvious. By simple i mean only recognize comments. The most common use-case is &lt;em&gt;dotfiles&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I also added symbols/(&lt;em&gt;sections&lt;/em&gt;) definitions. So by adding &lt;code&gt; &amp;gt;&amp;gt; SECTION NAME&lt;/code&gt; after a &lt;strong&gt;comment&lt;/strong&gt; declaration you can easily go to different sections in the file.&lt;/p&gt;
+&lt;p&gt;The package currently contains four &lt;em&gt;syntaxes&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;#  | ssHash  
+!  | ssExcla    
+// | ssDslash   
+;  | ssSemi     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install the package with 
+&lt;a href=&#34;https://packagecontrol.io/packages/SimpleSyntax&#34; target=&#34;_blank&#34;&gt;PackageControl&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;I have also recorded a short demo video and uploaded it to 
+&lt;a href=&#34;https://youtu.be/j6HZDstw91o&#34; target=&#34;_blank&#34;&gt;youtube&lt;/a&gt;
+.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ass divided</title>
+      <link>https://budrich.github.io/blog/1712/ass-divided/</link>
+      <pubDate>Sat, 23 Dec 2017 12:51:15 +0100</pubDate>
+      
+      <guid>https://budrich.github.io/blog/1712/ass-divided/</guid>
+      <description>&lt;p&gt;I have divided &lt;strong&gt;i3ass&lt;/strong&gt; in two repositories, &lt;strong&gt;i3ass&lt;/strong&gt; and &lt;code&gt;i3add&lt;/code&gt; (&lt;em&gt;i3 additions&lt;/em&gt;). My thought is that &lt;strong&gt;i3ass&lt;/strong&gt; will be a &lt;em&gt;more serious&lt;/em&gt; set of tools. While &lt;code&gt;i3add&lt;/code&gt; will be more experimental and can be seen as a showcase of uses for &lt;strong&gt;i3ass&lt;/strong&gt;. I do use all &lt;code&gt;i3add&lt;/code&gt; scripts in my personal, daily workflow.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;strong&gt;i3ass&lt;/strong&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;code&gt;function&lt;/code&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./i3ass/i3var&#34;&gt;i3var&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Set or get a i3 variable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./i3ass/i3fyra&#34;&gt;i3fyra&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;An advanced simple gridbased tiling layout&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./i3ass/i3run&#34;&gt;i3run&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Run, Raise or hide windows&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./i3ass/i3list&#34;&gt;i3list&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;List attributes of i3wm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./i3ass/i3get&#34;&gt;i3get&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Return information about i3wm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./i3ass/i3flip&#34;&gt;i3flip&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Tabswitching done right&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;i3add&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;function&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./scripts/i3add/i3cast&#34;&gt;i3cast&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Create and upload screen recordings&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./scripts/i3add/i3Kornhe&#34;&gt;i3Kornhe&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Resize windows by moving the corners&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./scripts/i3add/i3minimize&#34;&gt;i3minimize&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Minimize active window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./scripts/i3add/i3monocle&#34;&gt;i3monocle&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Maximize active window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./scripts/i3add/i3zen&#34;&gt;i3zen&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Send windows to the zenter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./scripts/i3add/i3term&#34;&gt;i3term&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Launch a command in a new urxvt window&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;
+&lt;a href=&#34;./scripts/i3add/i3wswp&#34;&gt;i3wswp&lt;/a&gt;
+&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Switch workspace and wallpaper&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;i3add&lt;/code&gt; will have a installation script similar to the old &lt;code&gt;install.sh&lt;/code&gt; in &lt;strong&gt;i3ass&lt;/strong&gt;, which linked the scripts to a preferred folder. &lt;strong&gt;i3ass&lt;/strong&gt; will get a new install script (a &lt;code&gt;Makefile&lt;/code&gt;) that will install the scripts with &lt;code&gt;make install&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mouseback</title>
+      <link>https://budrich.github.io/blog/1709/mouseback/</link>
+      <pubDate>Mon, 25 Sep 2017 17:20:01 +0200</pubDate>
+      
+      <guid>https://budrich.github.io/blog/1709/mouseback/</guid>
+      <description>&lt;p&gt;A while ago I got irritated how messy my i3 config file looked, and I researched alternative hotkey managers. I tried 
+&lt;a href=&#34;https://github.com/baskerville/sxhkd&#34; target=&#34;_blank&#34;&gt;sxhkd&lt;/a&gt;
+ and it is a fine piece of code. I got a much cleaner setup of the hotkeys and I could do stuff that i wasn&amp;rsquo;t able to do with i3.&lt;/p&gt;
+&lt;p&gt;But a couple of days ago, i realized that my i3 config could be just as clean as sxhkd by 
+&lt;a href=&#34;./blog/i3_setup&#34;&gt;using variables&lt;/a&gt;
+. After this realization I moved all my hotkeys back to my 
+&lt;a href=&#34;./dots/i3config&#34;&gt;new and improved i3 config file&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;However i still use sxhkd for one single &amp;ldquo;hotkey&amp;rdquo;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;button8
+  xdotool key BackSpace 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will make the &amp;lsquo;back button&amp;rsquo; of my mouse, send a BackSpace via 
+&lt;a href=&#34;https://github.com/jordansissel/xdotool&#34; target=&#34;_blank&#34;&gt;xdotool&lt;/a&gt;
+. Only time I would use the &amp;lsquo;back button&amp;rsquo;s back function is in a web browser, and many web browsers go back on backspace anyways (if they don&amp;rsquo;t, you can probably configure it to do so, if you can&amp;rsquo;t, you probably use the wrong browser.). So you don&amp;rsquo;t lose any functionality, and can now delete text with the mouse!&lt;/p&gt;
+&lt;p&gt;This is one of those things that once you start using it it&amp;rsquo;s hard to go back. When I am on a computer without this setting, I find myself going back instead of erasing text all the time, which can be very irritating..&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>swedish keyboards</title>
+      <link>https://budrich.github.io/blog/1709/swedish-keyboards/</link>
+      <pubDate>Mon, 25 Sep 2017 17:19:12 +0200</pubDate>
+      
+      <guid>https://budrich.github.io/blog/1709/swedish-keyboards/</guid>
+      <description>&lt;p&gt;when I was working as a technical support agent I received several calls from angry men who couldn&amp;rsquo;t find the &lt;code&gt;@&lt;/code&gt; symbol on the keyboard. When I explained that they had to hold &lt;code&gt;Alt-Gr&lt;/code&gt; and pressing &lt;code&gt;2&lt;/code&gt; at the same time, they exploded with anger and told me to tell the technicians to make a new keyboard layout! I explained it&amp;rsquo;s an old standard and agreed it was stupid, but that it would probably never change.&lt;/p&gt;
+&lt;h5 id=&#34;image-by-stuart-bradycommonswikimediaorgwikiuserstuartbrady-titleuserstuartbrady-borrowed-from-wikipediahttpscommonswikimediaorgwindexphpcurid1008945-cc-by-sa-30httpcreativecommonsorglicensesby-sa30-titlecreative-commons-attribution-share-alike-30&#34;&gt;Image by [Stuart Brady](//commons.wikimedia.org/wiki/User:StuartBrady&amp;rdquo; title=&amp;quot;User:StuartBrady) borrowed from 
+&lt;a href=&#34;https://commons.wikimedia.org/w/index.php?curid=1008945&#34; target=&#34;_blank&#34;&gt;wikipedia&lt;/a&gt;
+ [CC BY-SA 3.0](&lt;a href=&#34;http://creativecommons.org/licenses/by-sa/3.0/%22&#34;&gt;http://creativecommons.org/licenses/by-sa/3.0/&amp;quot;&lt;/a&gt; title=&amp;quot;Creative Commons Attribution-Share Alike 3.0)&lt;/h5&gt;
+&lt;p&gt;The Nordic keyboard is indeed stupid. Since we have three special letters someone once made a special layout to make room for these keys, this person thought that all these strange characters that no one ever will use could just as well be moved to make room for our glorious Nordic characters.&lt;/p&gt;
+&lt;p&gt;As a result the following characters are placed on very, very inconvenient places and often requires the &lt;code&gt;Alt-Gr&lt;/code&gt; key to be used (blue symbols (red symbols needs &lt;code&gt;Alt-Gr&lt;/code&gt; AND &lt;code&gt;Shift&lt;/code&gt;)):&lt;br&gt;
+&lt;code&gt;~[]{}\/$@^&#39;&amp;quot;?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;As a programmer I use these characters much more then &lt;code&gt;åäö&lt;/code&gt; . One solution is to have two keyboard layouts (US when coding, SE when needed). But I never get used to this. I always forget to switch back, and sometimes a layout is not applied globally and I end up with SE in the browser and US in Sublime or something similar.&lt;/p&gt;
+&lt;p&gt;But on GNU/Linux, one can customize the behavior of the keyboard in every way, and I found 
+&lt;a href=&#34;https://github.com/sebastiw/keyboard-layout&#34; target=&#34;_blank&#34;&gt;this nugget&lt;/a&gt;
+ on github.&lt;/p&gt;
+&lt;p&gt;After installing 
+&lt;a href=&#34;https://github.com/sebastiw/keyboard-layout&#34; target=&#34;_blank&#34;&gt;the seba&lt;/a&gt;
+ layout and adding the following line:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;setxkbmap -layout seba -option ctrl:nocaps -option lv3:ralt_switch&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;to my 
+&lt;a href=&#34;./dots/xinitrc&#34;&gt;.xinitrc&lt;/a&gt;
+ file, my keyboard acts just like if it had a normal US layout, but I can write: &lt;code&gt;öåä&lt;/code&gt; if I hold &lt;code&gt;Alt-Gr&lt;/code&gt; and press &lt;code&gt;;[&#39;&lt;/code&gt; .&lt;/p&gt;
+&lt;p&gt;I can&amp;rsquo;t thank 
+&lt;a href=&#34;https://github.com/sebastiw&#34; target=&#34;_blank&#34;&gt;Sebastian Weddmark Olsson&lt;/a&gt;
+ enough for this.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
