@@ -19,7 +19,7 @@
       <guid></guid>
       <description>
         &lt;p&gt;I was looking for a tool to shrink large pdf files that consisted solely of high quality scans and found this bash script wrapper around the 
-&lt;a href=&#34;http://www.ghostscript.com/&#34; target=&#34;_blank&#34;&gt;Ghoustscript&lt;/a&gt;
+&lt;a href=&#34;http://www.ghostscript.com/&#34; target=&#34;_blank&#34;&gt;Ghostscript&lt;/a&gt;
  program, That will change the DPI of the files to 72, which reduced the filesize with ~90% (230mb -&amp;gt; 20mb).&lt;/p&gt;
 
         
